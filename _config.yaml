@@ -54,3 +54,8 @@ minimal_mistakes:
   enable_comments: true
   # Set the default author for posts
   default_author: rb3n0s
+
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:path/

@@ -26,10 +26,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.7' # Specify the Ruby version you want to use
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle install
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:

@@ -1,0 +1,35 @@
+---
+layout: home
+title: Welcome to Fetchz La Vache Lair
+description: Our lately CTF experiences and whatnot stuff we are digitally cooking.
+---
+
+<div class="home">
+  <h1 class="page-title">{{ site.title }}</h1>
+  <p class="lead">{{ site.description }}</p>
+
+  <h2>Recent Posts</h2>
+  <ul class="post-list">
+    {% for post in site.posts limit: 5 %}
+      <li>
+        <article>
+          <h3>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </h3>
+          <p class="post-meta">
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+            {% if post.categories %}
+              <span class="post-category"> in {{ post.categories | join: ', ' }}</span>
+            {% endif %}
+          </p>
+          <p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+        </article>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <div class="about">
+    <h2>About Us</h2>
+    <p>Just an awesome collective that several decades ago got computers for Christmas.</p>
+  </div>
+</div>

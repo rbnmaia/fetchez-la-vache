@@ -1,0 +1,56 @@
+# Site settings
+title: Fetchez La Vache
+description: A blog about our CTF team.
+url: https://rbnmaia.github.io/fetchez-la-vache
+baseurl: "" # Leave empty if not using a subdirectory
+
+# Author settings
+author:
+  name: rb3n0s
+  email: rb3n0s@proton.me
+
+# Build settings
+markdown: kramdown
+theme: minimal-mistakes-jekyll # Using Minimal Mistakes theme
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+# Social media links
+social:
+  twitter: 
+  github: 
+  linkedin: 
+
+# Pagination settings
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+# Exclude files and directories from the build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules/
+  - vendor/
+
+# Permalinks settings
+permalink: /:categories/:title/
+
+# Markdown settings
+kramdown:
+  input: GFM
+
+# Minimal Mistakes settings
+minimal_mistakes:
+  # Customize the layout and appearance
+  layout: single
+  # Set the default layout for posts
+  post_layout: single
+  # Enable or disable specific features
+  enable_comments: true
+  # Set the default author for posts
+  default_author: Your Name
